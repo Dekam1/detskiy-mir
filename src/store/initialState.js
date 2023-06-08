@@ -1,5 +1,9 @@
 const initialState = {
-    products: [],
+    dataPagination: {
+        page: 1,
+        pageQty: 0
+    },
+    products: []
 }
 
 export default initialState

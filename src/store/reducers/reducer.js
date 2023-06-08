@@ -9,6 +9,24 @@ export default function reducer(state = initialState, action) {
                 products: action.products
             }
 
+        case ACTIONS.SET_PAGE:
+            return {
+                ...state,
+                dataPagination: {
+                    ...state.dataPagination,
+                    page: action.payload
+                }
+            }
+        
+        case ACTIONS.SET_PAGE_QTY:
+            return {
+                ...state,
+                dataPagination: {
+                    ...state.dataPagination,
+                    pageQty: action.payload
+                }
+            }
+
         default: return state
     }
 }

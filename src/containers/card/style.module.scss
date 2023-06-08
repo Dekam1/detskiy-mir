@@ -1,0 +1,40 @@
+.card {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    width: 250px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 1);
+
+    &:nth-child(5n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 5) {
+        margin-bottom: 0px;
+    }
+
+    .card__img {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .card__bottom {
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 16px 16px 16px;
+
+        .card__name {
+            margin-bottom: 4px;
+            width: 100%;
+            flex: 1 2 auto;
+            font-size: 16px;
+        }
+
+        .card__price {
+            margin-top: 4px;
+            font-size: 22px;
+            font-weight: 800;
+        }
+    }
+}

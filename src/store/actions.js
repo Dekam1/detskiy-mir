@@ -1,5 +1,7 @@
 const ACTIONS = {
-    SET_PRODUCTS: 'SET_PRODUCTS'
+    SET_PRODUCTS: 'SET_PRODUCTS',
+    SET_PAGE: 'SET_PAGE',
+    SET_PAGE_QTY: 'SET_PAGE_QTY'
 }
 
 export default ACTIONS
