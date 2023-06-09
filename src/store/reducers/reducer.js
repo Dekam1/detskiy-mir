@@ -17,7 +17,7 @@ export default function reducer(state = initialState, action) {
                     page: action.payload
                 }
             }
-        
+
         case ACTIONS.SET_PAGE_QTY:
             return {
                 ...state,
@@ -25,6 +25,12 @@ export default function reducer(state = initialState, action) {
                     ...state.dataPagination,
                     pageQty: action.payload
                 }
+            }
+
+        case ACTIONS.SET_IS_FETCHING:
+            return {
+                ...state,
+                isFetching: action.payload
             }
 
         default: return state
