@@ -5,6 +5,11 @@
     border-radius: 16px;
     background: rgba(255, 255, 255, 1);
 
+    .card__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     &:nth-child(5n) {
         margin-right: 0;
     }

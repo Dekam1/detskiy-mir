@@ -69,3 +69,105 @@ body {
   top: 50%;
   left: 50%;
 }
+
+.product__wrapper {
+  padding: 24px 0px 56px 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .product {
+    width: 792px;
+    background: #FFFFFF;
+    color: #172029;
+    border-radius: 16px;
+  }
+
+  .product__main {
+    padding: 24px;
+    display: flex;
+
+    .product__left {
+      & img {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        width: 374px;
+        height: 374px;
+      }
+    }
+
+    .product__right {
+      .product__title {
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: 28px;
+      }
+
+      .product__price {
+        margin: 24px 0px 8px 0px;
+        font-weight: 800;
+        font-size: 28px;
+      }
+
+      .product__button {
+        margin-bottom: 24px;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 12px;
+        background: #0073E6;
+        border: none;
+        padding: 12px 0px;
+        text-align: center;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .product__conditions__text {
+        font-size: 20px;
+
+        & p:nth-child(1) {
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+
+          &::before {
+            margin-right: 8px;
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-image: url('../public/img/return.png');
+            background-repeat: no-repeat;
+          }
+        }
+
+        & p:nth-child(3) {
+          margin-top: 16px;
+          font-size: 16px;
+          color: #808080;
+        }
+      }
+    }
+  }
+
+  .product__details {
+    margin-top: 24px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    width: 792px;
+
+    .details__title {
+      margin-bottom: 16px;
+      font-size: 24;
+      font-weight: 700;
+    }
+
+    .details__text {
+      color: #172029;
+      font-size: 16px;
+    }
+  }
+}
