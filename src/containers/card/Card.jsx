@@ -10,7 +10,13 @@ export default function Card({ picture, title, rating, price }) {
                 <img src={picture} className={style.card__img} width={250} height={250} alt={title} />
                 <div className={style.card__bottom}>
                     <p title={title} className={style.card__name}>{abbreviateString(title)}</p>
-                    <Rating name="read-only" value={rating} precision={0.1} readOnly size="small" />
+                    <Rating
+                        name="read-only"
+                        size="small"
+                        readOnly
+                        value={rating}
+                        precision={0.1}
+                    />
                     <p className={style.card__price}>
                         <b>{formatPrice(price)} ₽</b>
                     </p>

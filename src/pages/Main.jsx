@@ -15,7 +15,7 @@ export default function Main() {
 
     React.useEffect(() => {
         dispatch(getProducts(page));
-    }, [page]);
+    }, [page, dispatch]);
 
     return (
         <>
