@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./style.module.scss";
 
-export default function Header() {
+function Header() {
     const navLinkClass = [style.nav_link];
 
     function addClass({ isActive }) {
@@ -32,3 +32,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header;

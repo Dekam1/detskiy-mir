@@ -5,8 +5,7 @@ import style from "./style.module.scss";
 import abbreviateString from "../../utils/abbreviateString";
 import formatPrice from "../../utils/formatPrice";
 
-
-export default function Card({ id, picture, title, rating, price }) {
+function Card({ id, picture, title, rating, price }) {
     return (
         <li className={style.card}>
             <Link className={style.card__link} to={`/product/${id}`}>
@@ -30,3 +29,5 @@ export default function Card({ id, picture, title, rating, price }) {
         </li>
     )
 }
+
+export default Card;

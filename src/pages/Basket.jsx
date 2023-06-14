@@ -1,7 +1,9 @@
-export default function Basket() {
+function Basket() {
     return (
         <div>
             Корзина
         </div>
     )
 }
+
+export default Basket;

@@ -2,13 +2,13 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CircularProgress from '@mui/material/CircularProgress';
 
-import Header from "../containers/header/Header";
-import Card from "../containers/card/Card";
-import Pagination from "../containers/Pagination";
+import Header from "../components/header/Header";
+import Card from "../components/card/Card";
+import Pagination from "../components/Pagination";
 
 import getProducts from "../store/actionCreators/getProducts";
 
-export default function Main() {
+function Main() {
     const products = useSelector(state => state.products);
     const dispatch = useDispatch();
     const { page } = useSelector(state => state.dataPagination);
@@ -35,4 +35,6 @@ export default function Main() {
             </main>
         </>
     )
-}
+};
+
+export default Main;

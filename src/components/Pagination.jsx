@@ -4,7 +4,7 @@ import { Pagination as DefaultPagination } from '@mui/material';
 
 import setPage from "../store/actionCreators/setPage";
 
-export default function Pagination() {
+function Pagination() {
     const dispatch = useDispatch();
     const { page, pageQty } = useSelector(state => state.dataPagination);
 
@@ -20,4 +20,6 @@ export default function Pagination() {
             onChange={(_, num) => dispatch(setPage(num))}
         />
     )
-}
+};
+
+export default Pagination;

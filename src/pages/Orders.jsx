@@ -1,11 +1,13 @@
 import React from "react";
 
-import Header from "../containers/header/Header";
+import Header from "../components/header/Header";
 
-export default function Orders() {
+function Orders() {
     return (
         <>
             <Header />
         </>
     )
-}
+};
+
+export default Orders;
