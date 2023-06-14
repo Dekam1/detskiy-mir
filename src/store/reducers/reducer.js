@@ -33,6 +33,11 @@ export default function reducer(state = initialState, action) {
                 isFetching: action.payload
             }
 
+        case ACTIONS.SET_ONE_PRODUCT:
+            return {
+                ...state,
+                product: action.payload
+            }
         default: return state
     }
 }

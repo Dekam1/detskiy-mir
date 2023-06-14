@@ -4,7 +4,8 @@ const initialState = {
         page: 1,
         pageQty: 0
     },
-    products: []
+    products: [],
+    product: {}
 }
 
 export default initialState

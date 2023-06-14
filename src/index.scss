@@ -97,6 +97,8 @@ body {
     }
 
     .product__right {
+      padding-left: 24px;
+
       .product__title {
         margin-bottom: 8px;
         font-weight: 700;
@@ -168,6 +170,11 @@ body {
     .details__text {
       color: #172029;
       font-size: 16px;
+
+      & ul {
+        list-style: none;
+        padding-left: 10px;
+      }
     }
   }
 }
