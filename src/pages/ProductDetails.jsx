@@ -1,9 +1,11 @@
 import React from "react";
-import { CircularProgress, Rating } from "@mui/material";
-import Header from "../containers/header/Header";
-import { useParams } from "react-router";
-import getOneProduct from "../store/actionCreators/getOneProduct";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router";
+import { CircularProgress, Rating } from "@mui/material";
+
+import Header from "../containers/header/Header";
+
+import getOneProduct from "../store/actionCreators/getOneProduct";
 import formatPrice from "../utils/formatPrice";
 import HtmlComponent from "../containers/HtmlComponent";
 

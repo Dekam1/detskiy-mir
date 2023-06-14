@@ -1,8 +1,10 @@
-import style from "./style.module.scss";
+import { Link } from "react-router-dom";
 import { Rating } from '@mui/material';
+import style from "./style.module.scss";
+
 import abbreviateString from "../../utils/abbreviateString";
 import formatPrice from "../../utils/formatPrice";
-import { Link } from "react-router-dom";
+
 
 export default function Card({ id, picture, title, rating, price }) {
     return (

@@ -1,9 +1,10 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
+
 import Main from "./pages/Main";
+import ProductDetails from "./pages/ProductDetails";
 import Orders from "./pages/Orders";
 import Basket from "./pages/Basket";
-import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (

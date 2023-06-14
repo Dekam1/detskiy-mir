@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./style.module.scss";
 import { NavLink } from "react-router-dom";
+import style from "./style.module.scss";
 
 export default function Header() {
     const navLinkClass = [style.nav_link];
