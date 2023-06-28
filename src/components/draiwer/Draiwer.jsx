@@ -1,6 +1,7 @@
 import React from "react";
 
 import style from "./style.module.scss";
+import DraiwerItem from "../DraiwerItem/DraiwerItem";
 
 function Draiwer() {
     const [showDraiwerMenu, setShowDraiwerMenu] = React.useState(false);
@@ -18,34 +19,7 @@ function Draiwer() {
                 <div className={style.draiwer_menu}>
                     <div className={style.box__shadow}>
                         <ul className={style.draiwer__list}>
-                            <li className={style.draiwer__item}>
-                                <article>
-                                    <div>
-                                        <img width={52} src="./img/Photo.png" alt="img" />
-                                        <p className={style.item__title}>Куртка Lassie</p>
-                                    </div>
-                                    <div className={style.draiwer__buttons}>
-                                        <button />
-                                        <span>1</span>
-                                        <button />
-                                    </div>
-                                    <p className={style.draiwer__item__price}>6 199 ₽</p>
-                                </article>
-                            </li>
-                            <li className={style.draiwer__item}>
-                                <article>
-                                    <div>
-                                        <img width={52} src="./img/Photo.png" alt="img" />
-                                        <p className={style.item__title}>Куртка Lassie</p>
-                                    </div>
-                                    <div className={style.draiwer__buttons}>
-                                        <button />
-                                        <span>1</span>
-                                        <button />
-                                    </div>
-                                    <p className={style.draiwer__item__price}>6 199 ₽</p>
-                                </article>
-                            </li>
+                            <DraiwerItem />
                         </ul>
                         <div className={style.menu__bottom}>
                             <div className={style.span__wrapper}>

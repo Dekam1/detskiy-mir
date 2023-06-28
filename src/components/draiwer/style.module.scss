@@ -38,80 +38,15 @@
             list-style: none;
             background: #ffffffff;
 
-            .draiwer__item {
-                padding: 16px 0px;
-                border-bottom: 1px solid #F2F2F2;
-
-                & article {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-            }
-
-            .item__title {
-                margin-left: 16px;
-                font-weight: 400;
-                font-size: 16px;
-            }
-
             & div {
                 display: flex;
                 align-items: center;
-            }
-
-            .draiwer__buttons {
-                background: #E6F1FC;
-                border-radius: 12px;
-
-                & button {
-                    cursor: pointer;
-                    width: 52px;
-                    height: 52px;
-                    border: none;
-                    background: inherit;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-
-                    &:hover {
-                        background-color: rgba(0, 115, 230, 0.1);
-                    }
-
-                    &:active {
-                        background-color: rgba(0, 115, 230, 0.2);
-                    }
-                }
-
-                & button:nth-child(1) {
-                    border-top-left-radius: 12px;
-                    border-bottom-left-radius: 12px;
-                    background-image: url('../../../public/img/minus.png');
-                }
-
-                & span {
-                    display: inline-block;
-                    font-size: 16px;
-                    text-align: center;
-                    width: 52px;
-                    height: 52px;
-                    line-height: 50px;
-                    font-weight: 700;
-                }
-
-                & button:nth-child(3) {
-                    border-top-right-radius: 12px;
-                    border-bottom-right-radius: 12px;
-                    background-image: url('../../../public/img/plus.png');
-                }
-            }
-
-            .draiwer__item__price {
-                font-size: 24px;
             }
         }
 
         .menu__bottom {
             padding: 22px 24px 24px 24px;
+            cursor: default;
             background: #FFFFFF;
             border-bottom-left-radius: 24px;
             border-bottom-right-radius: 24px;
