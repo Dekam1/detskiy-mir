@@ -19,7 +19,7 @@ function ProductDetails() {
         dispatch(getOneProduct(id));
     }, [dispatch, id]);
 
-
+    
 
     return (
         <>

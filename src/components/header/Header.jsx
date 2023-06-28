@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import style from "./style.module.scss";
+import Draiwer from "../draiwer/Draiwer";
 
 function Header() {
     const navLinkClass = [style.nav_link];
@@ -24,11 +25,7 @@ function Header() {
                     Заказы
                 </NavLink>
             </nav>
-            <NavLink to="/basket" className={style.basket_link}>
-                <div className={style.basket}>
-                    <span>Корзина (0)</span>
-                </div>
-            </NavLink>
+            <Draiwer />
         </header>
     )
 }

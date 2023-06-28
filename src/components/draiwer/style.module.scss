@@ -1,0 +1,149 @@
+.draiwer {
+    cursor: pointer;
+    position: relative;
+    width: 117px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+
+    .draiwer__icon::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: calc(50% - 10px);
+        left: -4px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../../../public/img/Shape.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .draiwer_menu {
+        padding-top: 17px;
+        position: absolute;
+        right: 0px;
+        width: 560px;
+
+        .box__shadow {
+            box-shadow: 0px 16px 40px 0px rgba(23, 32, 41, 0.32);
+            border-radius: 24px;
+        }
+
+        .draiwer__list {
+            padding: 8px 24px 0px 24px;
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+            cursor: default;
+            list-style: none;
+            background: #ffffffff;
+
+            .draiwer__item {
+                padding: 16px 0px;
+                border-bottom: 1px solid #F2F2F2;
+
+                & article {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+
+            .item__title {
+                margin-left: 16px;
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            & div {
+                display: flex;
+                align-items: center;
+            }
+
+            .draiwer__buttons {
+                background: #E6F1FC;
+                border-radius: 12px;
+
+                & button {
+                    cursor: pointer;
+                    width: 52px;
+                    height: 52px;
+                    border: none;
+                    background: inherit;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+
+                    &:hover {
+                        background-color: rgba(0, 115, 230, 0.1);
+                    }
+
+                    &:active {
+                        background-color: rgba(0, 115, 230, 0.2);
+                    }
+                }
+
+                & button:nth-child(1) {
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    background-image: url('../../../public/img/minus.png');
+                }
+
+                & span {
+                    display: inline-block;
+                    font-size: 16px;
+                    text-align: center;
+                    width: 52px;
+                    height: 52px;
+                    line-height: 50px;
+                    font-weight: 700;
+                }
+
+                & button:nth-child(3) {
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                    background-image: url('../../../public/img/plus.png');
+                }
+            }
+
+            .draiwer__item__price {
+                font-size: 24px;
+            }
+        }
+
+        .menu__bottom {
+            padding: 22px 24px 24px 24px;
+            background: #FFFFFF;
+            border-bottom-left-radius: 24px;
+            border-bottom-right-radius: 24px;
+
+            .span__wrapper {
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & span:nth-child(1) {
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+                & span:nth-child(2) {
+                    font-weight: 800;
+                    font-size: 28px;
+                }
+            }
+
+            .menu__bottom__button {
+                padding: 16px 0px;
+                width: 100%;
+                background: #0073E6;
+                border: none;
+                text-align: center;
+                font-weight: 700;
+                color: #ffffffff;
+                font-size: 16px;
+                border-radius: 12px;
+            }
+        }
+    }
+}
