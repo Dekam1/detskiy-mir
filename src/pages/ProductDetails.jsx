@@ -9,17 +9,23 @@ import HtmlComponent from "../components/HtmlComponent";
 import getOneProduct from "../store/actionCreators/getOneProduct";
 import formatPrice from "../utils/formatPrice";
 import AddButton from "../components/AddButton/AddButton";
+import ControlButton from "../components/ControlButton/ControlButton";
+import SubmitButton from "../components/SubmitButton/SubmitButton";
 
 
 function ProductDetails() {
     const { id } = useParams();
     const dispatch = useDispatch();
+    const cartItems = useSelector(state => state.cart.cartItems);
     const { product, isFetching } = useSelector(state => state);
     const { category, picture, price } = product;
 
     React.useEffect(() => {
         dispatch(getOneProduct(id));
     }, [dispatch, id]);
+
+    const findItem = cartItems.find((item) => item.product.id === id);
+    const addedToCart = findItem?.product.id === id ? true : false;
 
     return (
         <>
@@ -38,19 +44,29 @@ function ProductDetails() {
                                 <Rating
                                     name="read-only"
                                     size="small"
-                                    value={product.rating}
+                                    value={product.rating || 0}
                                     readOnly
                                     precision={0.1}
                                 />
                                 <p className="product__price">
                                     {formatPrice(product.price)} ₽
                                 </p>
-                                <AddButton
-                                    id={id}
-                                    category={category}
-                                    picture={picture}
-                                    price={price}
-                                />
+                                {addedToCart
+                                    ? <div className='buttons__wrapper'>
+                                        <ControlButton
+                                            id={findItem.product.id}
+                                            quantity={findItem.quantity}
+                                            action
+                                        />
+                                        <SubmitButton />
+                                    </div>
+                                    : <AddButton
+                                        id={id}
+                                        category={category}
+                                        picture={picture}
+                                        price={price}
+                                    />
+                                }
                                 <div className="product__conditions">
                                     <div className="product__conditions__text">
                                         <p>Условия возврата</p>

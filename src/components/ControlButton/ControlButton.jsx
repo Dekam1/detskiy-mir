@@ -1,14 +1,28 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./style.module.scss";
 
 import setCartItemQty from "../../store/actionCreators/setCartItemQty";
+import deleteCartItem from "../../store/actionCreators/deleteCartItem";
 
-function ControlButton({ id, quantity }) {
+import emptySend from "../../utils/emptySend";
+
+
+function ControlButton({ id, quantity, action = false }) {
     const dispatch = useDispatch();
+    const cartItems = useSelector(state => state.cart.cartItems);
+    const newQuantity = quantity - 1;
+    const length = cartItems.length - 1;
 
     function decrement() {
-        dispatch(setCartItemQty('decrement', id));
+        if (action && newQuantity === 0) {
+            dispatch(deleteCartItem(id));
+            if (length === 0) {
+                emptySend();
+            }
+        } else {
+            dispatch(setCartItemQty('decrement', id));
+        }
     };
 
     function increment() {

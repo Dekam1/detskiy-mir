@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 import style from './style.module.scss';
+
 import deleteCartItem from '../../store/actionCreators/deleteCartItem';
-import axios from 'axios';
+import emptySend from '../../utils/emptySend';
 
 function DeleteItem({ id }) {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.cartItems);
+    const length = cartItems.length - 1;
 
     function handleClick() {
         dispatch(deleteCartItem(id));
-        if (cartItems.length - 1 === 0) {
-            axios.post('https://skillfactory-task.detmir.team/cart/update', {
-                data: []
-            })
+        if (length === 0) {
+            emptySend();
         }
     };
 

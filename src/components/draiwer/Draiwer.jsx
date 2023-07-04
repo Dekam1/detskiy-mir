@@ -5,6 +5,8 @@ import style from "./style.module.scss";
 import DraiwerItem from "../DraiwerItem/DraiwerItem";
 import formatPrice from "../../utils/formatPrice";
 
+import SubmitButton from "../SubmitButton/SubmitButton";
+
 function Draiwer() {
     const [showDraiwerMenu, setShowDraiwerMenu] = React.useState(false);
     const cartItems = useSelector(state => state.cart.cartItems);
@@ -44,9 +46,7 @@ function Draiwer() {
                                 <span>Итого</span>
                                 <span>{formatPrice(totalSum) || 0} ₽</span>
                             </div>
-                            <button className={style.menu__bottom__button}>
-                                Оформить заказ
-                            </button>
+                            <SubmitButton />
                         </div>
                     </div>
                 </div>

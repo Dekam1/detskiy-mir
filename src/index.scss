@@ -111,6 +111,12 @@ body {
         font-size: 28px;
       }
 
+      .buttons__wrapper {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+      }
+
       .product__conditions__text {
         font-size: 20px;
 
