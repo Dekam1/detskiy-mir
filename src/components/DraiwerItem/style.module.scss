@@ -7,6 +7,10 @@
         justify-content: space-between;
         align-items: center;
 
+        & > * {
+            flex: 2;
+        }
+
         .title {
             margin-left: 16px;
             font-weight: 400;
@@ -14,6 +18,8 @@
         }
 
         .price {
+            flex: 1;
+            width: 10px;
             font-size: 24px;
         }
     }

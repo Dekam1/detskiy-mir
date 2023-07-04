@@ -1,16 +1,29 @@
-import ControlButton from "../ControlButton/ControlButton";
+import formatPrice from "../../utils/formatPrice";
 import style from "./style.module.scss";
 
-function DraiwerItem() {
+import ControlButton from "../ControlButton/ControlButton";
+import DeleteItem from "../DeleteItem/DeleteItem";
+
+function DraiwerItem({ id, quantity, category, picture, price }) {
+    const showDelete = quantity ? false : true;
+
     return (
         <li className={style.draiwer__item}>
             <article>
-                <div>
-                    <img width={52} src="./img/Photo.png" alt="img" />
-                    <p className={style.title}>Куртка Lassie</p>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <img width={52} src={picture} alt="img" />
+                    <p className={style.title}>{category}</p>
                 </div>
-                <ControlButton />
-                <p className={style.price}>6 199 ₽</p>
+                <ControlButton
+                    id={id}
+                    quantity={quantity}
+                />
+                {showDelete
+                    ? <DeleteItem
+                        id={id}
+                    />
+                    : <p className={style.price}>{formatPrice(quantity * price)} ₽</p>
+                }
             </article>
         </li>
     );

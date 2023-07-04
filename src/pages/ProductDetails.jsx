@@ -10,16 +10,16 @@ import getOneProduct from "../store/actionCreators/getOneProduct";
 import formatPrice from "../utils/formatPrice";
 import AddButton from "../components/AddButton/AddButton";
 
+
 function ProductDetails() {
     const { id } = useParams();
     const dispatch = useDispatch();
-    const { product = {}, isFetching } = useSelector(state => state);
+    const { product, isFetching } = useSelector(state => state);
+    const { category, picture, price } = product;
 
     React.useEffect(() => {
         dispatch(getOneProduct(id));
     }, [dispatch, id]);
-
-    
 
     return (
         <>
@@ -45,7 +45,12 @@ function ProductDetails() {
                                 <p className="product__price">
                                     {formatPrice(product.price)} ₽
                                 </p>
-                                <AddButton />
+                                <AddButton
+                                    id={id}
+                                    category={category}
+                                    picture={picture}
+                                    price={price}
+                                />
                                 <div className="product__conditions">
                                     <div className="product__conditions__text">
                                         <p>Условия возврата</p>
