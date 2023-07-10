@@ -1,0 +1,47 @@
+.order__item {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #ffffffff;
+    width: 100%;
+    border-radius: 16px;
+    font-weight: 700;
+
+    & article {
+        display: flex;
+        align-items: center;
+
+        & span {
+            font-size: 16px;
+            color: #808080;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
+        .order {
+            & p {
+                font-size: 24px;
+                color: #172029;
+            }
+        }
+
+        .order__imgs {
+            margin-left: 16px;
+            flex: 2;
+
+            & img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .order__info {
+            .span__padding {
+                padding-left: 20px;
+            }
+
+            & p {
+                font-size: 16px;
+            }
+        }
+    }
+}

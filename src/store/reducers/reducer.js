@@ -14,6 +14,12 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 products: action.products
             }
+        
+        case ACTIONS.SET_ORDERS:
+            return {
+                ...state,
+                orders: action.orders
+            }
 
         case ACTIONS.SET_CART_ITEM:
             return {
@@ -81,21 +87,12 @@ export default function reducer(state = initialState, action) {
                 product: action.payload
             }
 
-        case ACTIONS.SET_PAGE:
+        case ACTIONS.SET_SUBMIT:
             return {
                 ...state,
-                dataPagination: {
-                    ...state.dataPagination,
-                    page: action.payload
-                }
-            }
-
-        case ACTIONS.SET_PAGE_QTY:
-            return {
-                ...state,
-                dataPagination: {
-                    ...state.dataPagination,
-                    pageQty: action.payload
+                cart: {
+                    ...state.cart,
+                    cartItems: []
                 }
             }
         default: return state

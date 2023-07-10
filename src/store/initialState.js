@@ -1,13 +1,10 @@
 const initialState = {
     isFetching: false,
     products: [],
+    orders: [],
     product: {},
     cart: {
         cartItems: []
-    },
-    dataPagination: {
-        page: 1,
-        pageQty: 0
     }
 }
 

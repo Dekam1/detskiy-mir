@@ -7,8 +7,12 @@ async function updateCart(cartItems) {
     }));
     try {
         if (objArray.length) {
-            await axios.post('https://skillfactory-task.detmir.team/cart/update', {
-                data: objArray
+            await axios.post('https://skillfactory-task.detmir.team/cart/update', { data: objArray }, {
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                withCredentials: true
             })
         }
     } catch (error) {

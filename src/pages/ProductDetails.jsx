@@ -6,12 +6,11 @@ import { CircularProgress, Rating } from "@mui/material";
 import Header from "../components/header/Header";
 import HtmlComponent from "../components/HtmlComponent";
 
-import getOneProduct from "../store/actionCreators/getOneProduct";
+import getOneProduct from "../utils/getOneProduct";
 import formatPrice from "../utils/formatPrice";
 import AddButton from "../components/AddButton/AddButton";
 import ControlButton from "../components/ControlButton/ControlButton";
 import SubmitButton from "../components/SubmitButton/SubmitButton";
-
 
 function ProductDetails() {
     const { id } = useParams();
@@ -25,7 +24,8 @@ function ProductDetails() {
     }, [dispatch, id]);
 
     const findItem = cartItems.find((item) => item.product.id === id);
-    const addedToCart = findItem?.product.id === id ? true : false;
+    const addedToCart = findItem?.product.id === id;
+    const showControlButton = !!findItem?.quantity;
 
     return (
         <>
@@ -51,22 +51,25 @@ function ProductDetails() {
                                 <p className="product__price">
                                     {formatPrice(product.price)} ₽
                                 </p>
-                                {addedToCart
-                                    ? <div className='buttons__wrapper'>
-                                        <ControlButton
-                                            id={findItem.product.id}
-                                            quantity={findItem.quantity}
-                                            action
-                                        />
+                                {addedToCart ? (
+                                    <div className='buttons__wrapper'>
+                                        {showControlButton && (
+                                            <ControlButton
+                                                id={findItem.product.id}
+                                                quantity={findItem.quantity}
+                                                action
+                                            />
+                                        )}
                                         <SubmitButton />
                                     </div>
-                                    : <AddButton
+                                ) : (
+                                    <AddButton
                                         id={id}
                                         category={category}
                                         picture={picture}
                                         price={price}
                                     />
-                                }
+                                )}
                                 <div className="product__conditions">
                                     <div className="product__conditions__text">
                                         <p>Условия возврата</p>
