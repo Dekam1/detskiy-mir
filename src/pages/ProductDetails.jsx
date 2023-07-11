@@ -26,6 +26,7 @@ function ProductDetails() {
     const findItem = cartItems.find((item) => item.product.id === id);
     const addedToCart = findItem?.product.id === id;
     const showControlButton = !!findItem?.quantity;
+    const itemPrice = formatPrice(product.price);
 
     return (
         <>
@@ -49,7 +50,7 @@ function ProductDetails() {
                                     precision={0.1}
                                 />
                                 <p className="product__price">
-                                    {formatPrice(product.price)} ₽
+                                    {itemPrice} ₽
                                 </p>
                                 {addedToCart ? (
                                     <div className='buttons__wrapper'>

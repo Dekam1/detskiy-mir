@@ -6,14 +6,17 @@ import DeleteItem from "../DeleteItem/DeleteItem";
 import abbreviateString from "../../utils/abbreviateString";
 
 function DraiwerItem({ id, quantity, title, picture, price }) {
-    const showDelete = quantity ? false : true;
+    const showDelete = !quantity;
+    const itemPrice = formatPrice(price);
+    const totalItemPrice = formatPrice(quantity * price);
+    const itemTitle = abbreviateString(title, 10);
 
     return (
         <li className={style.draiwer__item}>
             <article>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <img width={52} src={picture} alt="img" />
-                    <p title={title} className={style.title}>{abbreviateString(title, 10)}</p>
+                    <p title={title} className={style.title}>{itemTitle}</p>
                 </div>
                 <ControlButton
                     id={id}
@@ -25,9 +28,9 @@ function DraiwerItem({ id, quantity, title, picture, price }) {
                     />
                     : <div className={style.price}>
                         {quantity > 1 && <p className={style.price__info}>
-                            {formatPrice(price)} ₽ за штуку
+                            {itemPrice} ₽ за штуку
                         </p>}
-                        <p>{formatPrice(quantity * price)} ₽</p>
+                        <p>{totalItemPrice} ₽</p>
                     </div>
 
                 }
