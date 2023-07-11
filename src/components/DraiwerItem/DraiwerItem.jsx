@@ -3,8 +3,9 @@ import style from "./style.module.scss";
 
 import ControlButton from "../ControlButton/ControlButton";
 import DeleteItem from "../DeleteItem/DeleteItem";
+import abbreviateString from "../../utils/abbreviateString";
 
-function DraiwerItem({ id, quantity, category, picture, price }) {
+function DraiwerItem({ id, quantity, title, picture, price }) {
     const showDelete = quantity ? false : true;
 
     return (
@@ -12,7 +13,7 @@ function DraiwerItem({ id, quantity, category, picture, price }) {
             <article>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <img width={52} src={picture} alt="img" />
-                    <p className={style.title}>{category}</p>
+                    <p title={title} className={style.title}>{abbreviateString(title, 10)}</p>
                 </div>
                 <ControlButton
                     id={id}
@@ -22,7 +23,13 @@ function DraiwerItem({ id, quantity, category, picture, price }) {
                     ? <DeleteItem
                         id={id}
                     />
-                    : <p className={style.price}>{formatPrice(quantity * price)} ₽</p>
+                    : <div className={style.price}>
+                        {quantity > 1 && <p className={style.price__info}>
+                            {formatPrice(price)} ₽ за штуку
+                        </p>}
+                        <p>{formatPrice(quantity * price)} ₽</p>
+                    </div>
+
                 }
             </article>
         </li>

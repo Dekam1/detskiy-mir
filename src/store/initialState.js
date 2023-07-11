@@ -1,4 +1,8 @@
 const initialState = {
+    snackbarOptions: {
+        snackbarOpen: false,
+        snackbarType: 'success',
+    },
     isFetching: false,
     products: [],
     orders: [],

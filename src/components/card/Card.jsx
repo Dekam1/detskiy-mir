@@ -12,7 +12,7 @@ function Card({ id, picture, title, rating, price }) {
                 <article>
                     <img src={picture} className={style.card__img} width={250} height={250} alt={title} />
                     <div className={style.card__bottom}>
-                        <p title={title} className={style.card__name}>{abbreviateString(title)}</p>
+                        <p title={title} className={style.card__name}>{abbreviateString(title, 40)}</p>
                         <Rating
                             name="read-only"
                             size="small"

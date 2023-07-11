@@ -8,6 +8,7 @@ import updateCart from "./utils/updateCart";
 import Main from "./pages/Main";
 import ProductDetails from "./pages/ProductDetails";
 import Orders from "./pages/Orders";
+import Snackbar from "./components/Snackbar/Snackbar";
 
 function App() {
   const cartItems = useSelector(state => state.cart.cartItems);
@@ -22,11 +23,14 @@ function App() {
   }, [cartItems, cartItems.length]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/product/:id" element={<ProductDetails />} />
-      <Route path="/orders" element={<Orders />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
+      <Snackbar />
+    </>
   );
 }
 

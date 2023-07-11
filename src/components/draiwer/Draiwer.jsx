@@ -35,7 +35,7 @@ function Draiwer() {
                                     key={item.product.id}
                                     id={item.product.id}
                                     quantity={item.quantity}
-                                    category={item.product.category}
+                                    title={item.product.title}
                                     picture={item.product.picture}
                                     price={item.product.price}
                                 />

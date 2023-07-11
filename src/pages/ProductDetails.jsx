@@ -17,7 +17,7 @@ function ProductDetails() {
     const dispatch = useDispatch();
     const cartItems = useSelector(state => state.cart.cartItems);
     const { product, isFetching } = useSelector(state => state);
-    const { category, picture, price } = product;
+    const { title, picture, price } = product;
 
     React.useEffect(() => {
         dispatch(getOneProduct(id));
@@ -65,7 +65,7 @@ function ProductDetails() {
                                 ) : (
                                     <AddButton
                                         id={id}
-                                        category={category}
+                                        title={title}
                                         picture={picture}
                                         price={price}
                                     />

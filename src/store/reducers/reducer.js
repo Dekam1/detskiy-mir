@@ -14,7 +14,7 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 products: action.products
             }
-        
+
         case ACTIONS.SET_ORDERS:
             return {
                 ...state,
@@ -95,6 +95,26 @@ export default function reducer(state = initialState, action) {
                     cartItems: []
                 }
             }
+
+        case ACTIONS.SET_SNACKBAR_OPTIONS:
+            return {
+                ...state,
+                snackbarOptions: {
+                    ...state.snackbarOptions,
+                    snackbarOpen: action.payload.action,
+                    snackbarType: action.payload.type
+                }
+            }
+
+        case ACTIONS.SET_SNACKBAR_CLOSE:
+            return {
+                ...state,
+                snackbarOptions: {
+                    ...state.snackbarOptions,
+                    snackbarOpen: action.payload,
+                }
+            }
+
         default: return state
     }
 }

@@ -11,6 +11,7 @@ import OrderItem from "../components/orderItem/OrderItem";
 function Orders() {
     const loader = useSelector(state => state.isFetching);
     const orders = useSelector(state => state.orders);
+    const paginationShow = orders.length && !loader;
     const dispatch = useDispatch();
 
     const [pageNumber, setPageNumber] = React.useState(1);
@@ -34,7 +35,7 @@ function Orders() {
                     </>}
                 </div>
             </main>
-            {orders.length && <Pagination
+            {paginationShow && <Pagination
                 pageNumber={pageNumber}
                 totalPages={totalPages}
                 setPageNumber={setPageNumber}

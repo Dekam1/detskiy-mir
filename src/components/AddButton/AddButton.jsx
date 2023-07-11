@@ -3,11 +3,11 @@ import style from "./style.module.scss";
 
 import setCartItem from "../../store/actionCreators/setCartItem";
 
-function AddButton({ id, category, picture, price }) {
+function AddButton({ id, title, picture, price }) {
     const dispatch = useDispatch();
 
     function handleClick() {
-        dispatch(setCartItem(id, category, picture, price));
+        dispatch(setCartItem(id, title, picture, price));
     }
 
     return (

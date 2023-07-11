@@ -43,8 +43,11 @@
 
         .card__price {
             margin-top: 4px;
-            font-size: 22px;
-            font-weight: 800;
+
+            & b {
+                font-size: 22px;
+                font-weight: 800;
+            }
         }
     }
 }
