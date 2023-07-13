@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import style from './style.module.scss';
+import deleteItem from "./img/deleteItem.svg";
 
 import deleteCartItem from '../../store/actionCreators/deleteCartItem';
 import emptySend from '../../utils/emptySend';
@@ -21,7 +22,7 @@ function DeleteItem({ id }) {
             onClick={handleClick}
             className={style.delete__item}
         >
-            <img src='/img/deleteItem.svg' className={style.delete__icon} alt='delete' />
+            <img src={deleteItem} className={style.delete__icon} alt='delete' />
             <span>Удалить</span>
         </div>
     );

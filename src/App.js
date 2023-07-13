@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={
+        <Route path="/detskiy-mir" element={
           <Main
             pageNumber={pageNumber}
             totalPages={totalPages}
