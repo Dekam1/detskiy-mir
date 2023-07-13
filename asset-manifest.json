@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/detskiy-mir/static/css/main.2e82be16.css",
+    "main.js": "/detskiy-mir/static/js/main.67fc9737.js",
+    "index.html": "/detskiy-mir/index.html",
+    "main.2e82be16.css.map": "/detskiy-mir/static/css/main.2e82be16.css.map",
+    "main.67fc9737.js.map": "/detskiy-mir/static/js/main.67fc9737.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e82be16.css",
+    "static/js/main.67fc9737.js"
+  ]
+}
