@@ -1,13 +1,15 @@
 {
   "files": {
     "main.css": "/detskiy-mir/static/css/main.2e82be16.css",
-    "main.js": "/detskiy-mir/static/js/main.67fc9737.js",
+    "main.js": "/detskiy-mir/static/js/main.ee5f4356.js",
+    "static/media/Logo.png": "/detskiy-mir/static/media/Logo.4ad30d0fe0670317af2f.png",
+    "static/media/deleteItem.svg": "/detskiy-mir/static/media/deleteItem.acaea8ea1694d7db793458de016dd54a.svg",
     "index.html": "/detskiy-mir/index.html",
     "main.2e82be16.css.map": "/detskiy-mir/static/css/main.2e82be16.css.map",
-    "main.67fc9737.js.map": "/detskiy-mir/static/js/main.67fc9737.js.map"
+    "main.ee5f4356.js.map": "/detskiy-mir/static/js/main.ee5f4356.js.map"
   },
   "entrypoints": [
     "static/css/main.2e82be16.css",
-    "static/js/main.67fc9737.js"
+    "static/js/main.ee5f4356.js"
   ]
 }
